@@ -1,0 +1,316 @@
+$font-stack: 'Work Sans', sans-serif;
+$red: #E5343E;
+$blue: #252036;
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+//@import 'normalize';
+html {
+	overflow-x: hidden;
+}
+
+html a {
+	text-decoration: none;
+	display: block;
+}
+
+html ul li{
+	list-style-type: none;
+}
+
+html ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+.equipa .section-margin-cover {
+	//margin-right: 40px;
+}
+
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+.section-cover {
+	background-image: url("/images/main_image_S.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 80vh;
+	background-size:cover;
+	background-position:center center;
+	z-index: -10;
+	color: white;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-content: flex-end;
+}
+
+.equipa h1 {
+	text-transform: initial;
+	letter-spacing: 0.2rem;
+}
+
+.equipa h2 {
+	text-transform: initial;
+	font-size: 1.3rem;
+	font-weight: 100;
+	letter-spacing: 0.15rem;
+	margin-bottom: 25px;
+}
+
+/*------------------------------------*\
+    #Section-2
+\*------------------------------------*/
+
+// TEAM MEMBER
+.container-section {
+	margin: 40px;
+	margin: 0 auto;
+}
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.member {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start ;
+	padding: 0;
+	width: 100%;
+	margin-bottom: 40px;
+	padding: 20px;
+	box-sizing: border-box;
+//	box-sizing: content-box;
+
+}
+
+
+.item {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	//align-content: flex-start;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+
+/*
+
+	display: block;
+	float: left;
+	flex: 0 0 auto;
+	margin: 20px;
+	width: 60vw;
+	height: 100%;
+	//height: 60%;
+	//padding: 20px;
+	margin-bottom: 40px;	*/
+}
+
+
+.foto-perfil-1 {
+	display: block;
+	//margin: 20px;
+	//width: 70vw;
+	//height: auto;
+	//height: 100%;
+	width: 200px;
+	padding: 0px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.equipa h3 {
+	font-size: 2.2rem;
+	font-weight: 400;
+	letter-spacing: 0.1;
+	text-align: center;
+	margin: 0.3rem;
+}
+
+.equipa h4 {
+	font-size: 1.4rem;
+	font-weight: 300;
+	letter-spacing: 0.2;
+	color: $red;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+}
+
+
+.align-center {
+	text-align: center;
+}
+
+
+// DESCRIPTION
+.description {
+	position: fixed;
+	top: 0px;
+	left: 0;
+	background-color: $red;
+	-webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	width: 100vw;
+	height: 100%;
+	z-index: 2;
+	overflow-y: scroll;
+}
+
+.team-detail-red {
+	padding-top: 20px;
+}
+
+.description.is--hidden {
+	display: none;
+}
+
+.description.is--visible {
+	display: block;
+}
+
+.equipa .logo-M {
+	position: absolute;
+	top: 0;
+}
+
+.close {
+	height: 40px;
+	fill: white;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.team-detail-picture {
+	background-image: url("/images/daniel-vaz-2-S.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 80vh;
+	background-size:cover;
+	background-position:center center;
+	z-index: -10;
+	color: white;
+	position: relative;
+	display: inline-block;
+}
+
+.name-detail {
+	font-size: 2.2rem;
+	font-weight: 100;
+	letter-spacing: 0.1rem;
+	margin: 0.3rem;
+	color: white;
+	margin: 0;
+}
+
+.position-detail {
+	font-size: 1.25rem;
+	font-weight: 600;
+	//letter-spacing: 0.05rem;
+	color: $blue;
+	margin: 0;
+	margin-bottom: 25px;
+	line-height: 1.5;	
+}
+
+.mail-detail, .phone-detail, .bio-detail {
+	font-size: 1.25rem;
+	font-weight: 100;
+	letter-spacing: 0.1rem;
+	margin: 0.3rem;
+	color: white;
+	margin: 0;
+	line-height: 2;
+}
+
+.mail-detail, .phone-detail {
+	line-height: 2;
+}
+
+.bio-detail {
+	margin-top: 25px;
+}
+ 
+
+
+/* BTN */
+.button-blue{
+	text-decoration: none;
+	letter-spacing: 0.1rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+	border: 2px solid $blue;
+	color: $blue;
+	overflow: hidden;
+	display: inline-block;
+	padding: 15px 30px;
+	margin: 40px auto;
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.button-blue:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: $blue;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-blue:hover {
+  color: white;
+}
+
+.button-blue:hover:before{
+  left: 0;
+}
+
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {	
+	.member {
+		width: calc(100%/4);
+		height: calc(100%/4);
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.foto-perfil-1 {
+		width: calc(100%/3);
+		height: calc(100%/3);
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.foto-perfil-1 {
+		width: calc(100%/2);
+		height: calc(100%/2);
+	}
+}

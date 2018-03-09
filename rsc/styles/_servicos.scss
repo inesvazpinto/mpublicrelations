@@ -1,0 +1,218 @@
+$font-stack: 'Work Sans', sans-serif;
+$red: #E5343E;
+$blue: #252036;
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+//@import 'normalize';
+
+html a {
+	text-decoration: none;
+}
+
+html ul li{
+	list-style-type: none;
+}
+
+html ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+.servicos .logo-M {
+    fill: $red;
+}
+.servicos .menu-btn, .servicos .menu-btn::after, .servicos .menu-btn::before {
+    background: $red;
+}
+.servicos .section-margin-cover {
+	margin-right: 40px;
+}
+
+.servicos {
+	background-color: rgb(235,235,235);
+	min-height: 100vh;
+}
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+
+.servicos h1 {
+	font-size: 2.2rem;
+	font-weight: 200;
+	text-transform: initial;
+	letter-spacing: 0.2rem;
+	color: $red;
+	padding-top: 30vh;
+	-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+	transition:         all 600ms cubic-bezier(1, 0, 0, 1);
+}
+
+.servicos h2 {
+	text-transform: initial;
+	font-size: 1.2rem;
+	font-weight: 400;
+	letter-spacing: 0.05rem;
+	margin-bottom: 25px;
+	-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+	transition:         all 600ms cubic-bezier(1, 0, 0, 1);
+}
+
+.padding-bottom {
+	padding-bottom: 80px;
+}
+/*------------------------------------*\
+    #Select Box
+\*------------------------------------*/
+
+.select-box {
+	position: fixed;
+    bottom: 0;
+}
+
+.selector {
+	list-style-type: none; 
+	padding-left: 15px; 
+	padding-right: 15px; 
+	height: 60px;
+	background-color: rgb(235,235,235);  
+	color: $blue; 
+	text-align: left; 
+	border: 1px solid $blue; 
+	cursor:pointer; 
+	width: 100vw; 
+	display:inline-block; 
+	position: absolute;
+	bottom: 0;
+	left :0;
+	font-size: 1.2rem;
+	font-weight: 400;
+	box-sizing: border-box;
+	z-index: 10;
+
+	&:before {
+		content:''; 
+		width: 0; 
+		height: 0; 
+		border-left: 8px solid transparent;	
+		border-right: 8px solid transparent;	
+		border-top: 6px solid $blue; 
+		position: absolute; 
+		top: 26px; 
+		right: 15px; 
+		transition:all ease 0.25s;
+	}
+}
+
+.selector.open {
+	&:before {
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-bottom: 6px solid $blue;
+		border-top: 0;
+	}
+}
+
+
+.options-box {
+	border: 1px solid $blue;
+	background-color: rgb(235,235,235); 
+	left: 0px;
+	z-index: 9;
+	width: 100vw;
+	box-sizing: border-box;
+	border-top: 0;
+	border-bottom: 0;
+	position: fixed;
+	bottom: -120%;
+	-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+	transition:         all 600ms cubic-bezier(1, 0, 0, 1);
+}
+
+.option-item {
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: $blue;
+	height: 60px;
+	width: 100vw;
+	border-top: 1px solid $blue; 
+	padding-left: 15px; 
+	padding-right: 15px;
+	display: table;
+	box-sizing: border-box;
+}
+
+.option-item p {
+	display: table-cell;
+	vertical-align: middle
+}
+
+.options-box.open {
+	bottom: 60px;
+}
+
+/* BTNS */
+.servicos .button {
+	margin-right: 20px;
+}
+
+.button-red{
+	text-decoration: none;
+	//letter-spacing: 0.1rem;
+	font-size: 1.2rem;
+	font-weight: 500;
+	border: 1.5px solid $red;
+	color: white;
+	background-color: $red;
+	overflow: hidden;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 40px auto;
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	z-index: 0;
+}
+
+.button-red:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: white;
+  color: $red;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-red:hover {
+  color: red;
+}
+
+.button-red:hover:before{
+  left: 0;
+}
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {	
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}

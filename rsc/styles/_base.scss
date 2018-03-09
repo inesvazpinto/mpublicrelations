@@ -1,0 +1,221 @@
+$font-stack: 'Work Sans', sans-serif;
+$red: #E5343E;
+$blue: #252036;
+
+/*------------------------------------*\
+    #Header
+\*------------------------------------*/
+header {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+}
+
+.logo-M {
+	margin: 15px;
+	height: 40px;
+	width: auto;
+	z-index: 4;
+	fill: white;
+}
+
+/* ----------- Menu Btn - open - closed ----------- */
+.menu-btn {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	background: #fff;
+	height: .2rem;
+	width: 30px;
+	background: white;
+	z-index: 3;
+}
+
+.menu-btn::before, .menu-btn::after {
+	background: white;
+	content: '';
+	display: block;
+	height: .2rem;
+	width: 30px;
+}
+
+.menu-btn::before {
+	transform: translateY(-.8rem);
+}
+
+.menu-btn::after {
+	transform: translateY(.6rem);
+}
+
+.menu-btn.active {
+  background: transparent;
+}
+
+.menu-btn.active::before {
+  transform: translateY(0rem) rotate(-45deg);
+}
+
+.menu-btn.active::after {
+  transform: translateY(-0.2rem) translateX(0rem) rotate(45deg);
+}
+
+/* ----------- Menu ----------- */
+.menu{
+	position: fixed;
+	top: 0px;
+	background-color: $red;
+	-webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	width: 100vw;
+	height: 100%;
+	z-index: 2;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.menu.is--hidden {
+	top: -100%;
+}
+
+.menu.is--visible {
+	top: 0px;
+	width: 100%;
+}
+
+.menu-item {
+	font-size: 2.5rem;
+	color: white;
+	font-weight: 100;
+	line-height: 2;
+	position: relative;
+}
+
+.menu-item::after {
+    content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+    height: 5px;
+    width: 0%;
+    margin-bottom: -6px;
+    background-color: white;
+    -webkit-transition: width 0.3s ease-in-out;
+	transition: width 0.3s ease-in-out;
+}
+
+.menu-item:hover::after {
+	width: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: width 0.3s ease-in-out;
+
+}
+
+/* ----------- Social Icons ----------- */
+.social-icon {
+    color: $blue;
+    font-size: 2.5rem;
+}
+
+.social-icon:hover {
+    color: white;
+
+}
+
+ul .social-icons {
+    margin-top: 10px;
+}
+
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+	height: 100px;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.fa-facebook-f, .fa-linkedin-in {
+    padding: 15px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+
+/* ----------- Language ----------- */
+.language {
+	color: white;
+	text-align: left;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+}
+
+.language-item {
+	font-size: 1.1rem;
+	color: white;
+	font-weight: 200;
+	letter-spacing: 0.2rem;
+	position: relative;
+	margin-right: 20px;
+}
+
+.language-item::after {
+    content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+    height: 1px;
+    width: 0%;
+    margin-bottom: -2px;
+    background-color: white;
+    -webkit-transition: width 0.3s ease-in-out;
+	transition: width 0.3s ease-in-out;
+}
+
+.language-item:hover::after {
+	width: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: width 0.3s ease-in-out;
+}
+
+ul.language {
+    margin-top: 10px;
+}
+
+.language li {
+    vertical-align: top;
+    display: inline;
+}
+
+/*------------------------------------*\
+    #Footer
+\*------------------------------------*/
+footer {
+	padding: 5px 0px;
+	height: auto;
+	width: 100vw;
+	background-color: rgba(37,32,54,0.1);
+
+	p{
+		font-size: .7rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		text-align: center;
+		color: $blue;
+	}
+}

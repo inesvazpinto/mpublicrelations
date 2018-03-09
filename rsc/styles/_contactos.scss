@@ -1,0 +1,192 @@
+$font-stack: 'Work Sans', sans-serif;
+$red: #E5343E;
+$blue: #252036;
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+//@import 'normalize';
+
+html a {
+	text-decoration: none;
+}
+
+html ul li{
+	list-style-type: none;
+}
+
+html ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+.contactos .logo-M {
+    fill: $red;
+}
+.contactos .menu-btn, .contactos .menu-btn::after, .contactos .menu-btn::before {
+    background: $red;
+}
+
+.contactos {
+	background-color: rgb(235,235,235);
+	min-height: 100vh;
+}
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+
+.address {
+	margin-top: 25vh;
+}
+
+.contactos h2 {
+	text-transform: initial;
+	font-size: 1.7rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+	margin-bottom: 25px;
+}
+
+.contactos-text {
+	font-size: 1.1rem;
+	font-weight: 400;
+	line-height: 1.8;
+}
+
+.contactos h1 {
+	font-size: 4rem;
+	font-weight: 200;
+	text-transform: initial;
+	letter-spacing: 0.2rem;
+	color: $red;
+	padding-top: 50px;
+	-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
+	transition:         all 600ms cubic-bezier(1, 0, 0, 1);
+}
+
+
+.padding-bottom {
+	padding-bottom: 80px;
+}
+/*------------------------------------*\
+    #Form
+\*------------------------------------*/
+.form-contact {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-content: flex-end;
+	width: 300px;
+}
+
+.form-group {
+	margin-bottom: 30px;
+	color: $blue;
+}
+.form-control {
+	font-size: 1.2rem;
+	border-radius: 0;
+	border-color: $blue;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	box-shadow: none;
+	background: transparent;
+	float: none;
+}
+
+.form-control:focus {
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.form-control::-webkit-input-placeholder { /* Chrome */
+	font-size: 1rem;
+	color: $blue;
+	opacity: 0.5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-size: 1rem;
+	color: $blue;
+	opacity: 0.5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-size: 1rem;
+	color: $blue;
+	opacity: 0.5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	font-size: 1rem;
+	color: $blue;
+	opacity: 0.5;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+	font-size: 1rem;
+	color: $blue;
+	opacity: 0.5;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	background-color: $blue;
+	background-image: none;
+	color: $blue;
+}
+
+.button-red{
+	text-decoration: none;
+	//letter-spacing: 0.1rem;
+	font-size: 1.2rem;
+	font-weight: 500;
+	border: 1.5px solid $red;
+	color: white;
+	background-color: $red;
+	overflow: hidden;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 40px auto;
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	z-index: 0;
+}
+
+.button-red:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: white;
+  color: $red;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-red:hover {
+  color: red;
+}
+
+.button-red:hover:before{
+  left: 0;
+}
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {	
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}

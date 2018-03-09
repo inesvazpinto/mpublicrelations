@@ -1,0 +1,165 @@
+
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+@import 'normalize';
+@import 'base';
+@import 'clientes';
+@import 'sobre';
+@import 'equipa';
+@import 'servicos';
+@import 'contactos';
+
+
+html a {
+	text-decoration: none;
+}
+
+html ul li{
+	list-style-type: none;
+}
+
+html ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*------------------------------------*\
+    #Layout
+\*------------------------------------*/
+$font-stack: 'Work Sans', sans-serif;
+$red: #E5343E;
+$blue: #252036;
+
+:root {
+	background-color: white;
+	font-family: $font-stack;
+	font-weight: 100;
+	line-height: 1.5;
+	font-size: 62.5%;
+	color: $blue;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+
+.section-margin-cover, .section-margin {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+.section-1 {
+	background-image: url("/images/main_image_S.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	background-size:cover;
+	background-position:center center;
+	z-index: -1;
+	color: white;
+	display: block;
+	position: relative;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 5rem;
+	font-weight: 100;
+	line-height: 1.1;
+	margin-bottom: 15px;
+	margin-top: 0;
+	padding-top: 50vh;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: 100;
+	letter-spacing: 0.2rem;
+}
+
+/*------------------------------------*\
+    #Section-2
+\*------------------------------------*/
+.section-2 {
+	height: auto;
+	width: 100%;
+	position: relative;
+	padding-top: 40px;
+	display: block;
+	position: relative;
+	text-align: center;
+}
+
+.text-1 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-align: left;
+	line-height: 1.6;
+    letter-spacing: 0.1rem;
+}
+
+.more-btn {
+	background-color: $red;
+}
+
+/* BTN */
+.button{
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 500;
+	border: 1.5px solid $red;
+	color: $red;
+	overflow: hidden;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 40px auto;
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.button:before{
+  content: "";
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: $red;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button:hover:before{
+  left: 0%;
+}
+
+/*------------------------------------*\
+    #Section-3
+\*------------------------------------*/
+.image-block {
+	background-image: url("/images/office_S.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 300px;
+	background-position:center center;
+	display: block;
+	position: relative;
+}
+

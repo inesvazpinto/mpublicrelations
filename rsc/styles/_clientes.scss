@@ -1,0 +1,124 @@
+$font-stack: 'Work Sans', sans-serif;
+$red: #E5343E;
+$blue: #252036;
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+//@import 'normalize';
+
+html a {
+	text-decoration: none;
+}
+
+html ul li{
+	list-style-type: none;
+}
+
+html ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+.clientes .section-margin-cover {
+	margin-right: 40px;
+}
+
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+.section-cover {
+	background-image: url("/images/main_image_S.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 80vh;
+	background-size:cover;
+	background-position:center center;
+	z-index: -10;
+	color: white;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-content: flex-end;
+}
+
+.clientes h1 {
+	text-transform: initial;
+	letter-spacing: 0.2rem;
+}
+
+.clientes h2 {
+	text-transform: initial;
+	font-size: 1.5rem;
+	font-weight: 100;
+	letter-spacing: 0.2rem;
+	margin-bottom: 25px;
+}
+
+/*------------------------------------*\
+    #Section-2
+\*------------------------------------*/
+
+// LOGOS
+.container-section {
+	margin: 40px;
+}
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.logos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	padding: 0;
+//	max-width: 80vw;
+//	margin: 0 20vw;
+//	overflow-x: hidden;
+
+}
+
+.logos img {
+	display: block;
+	float: left;
+	flex: 0 0 auto;
+	margin: 20px;
+	width: 60vw;
+	height: 100%;
+	padding: 20px;
+}
+
+
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {	
+	.logos img {
+		width: calc(100%/4);
+		height: calc(100%/4);
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.logos img {
+		width: calc(100%/3);
+		height: calc(100%/3);
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.logos img {
+		width: calc(100%/2);
+		height: calc(100%/2);
+	}
+}
