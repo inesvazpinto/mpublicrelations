@@ -28,8 +28,6 @@ html ul {
     #Layout
 \*------------------------------------*/
 $font-stack: 'Work Sans', sans-serif;
-$red: #E5343E;
-$blue: #252036;
 
 :root {
 	background-color: white;
@@ -42,15 +40,6 @@ $blue: #252036;
 
 body {
 	overflow-x: hidden;
-}
-
-/*------------------------------------*\
-    #Section-General
-\*------------------------------------*/
-
-.section-margin-cover, .section-margin {
-	margin-left: 15px;
-	margin-right: 15px;
 }
 
 /*------------------------------------*\
@@ -69,21 +58,8 @@ body {
 	position: relative;
 }
 
-h1 {
-	text-transform: uppercase;
-	font-size: 5rem;
-	font-weight: 100;
-	line-height: 1.1;
-	margin-bottom: 15px;
-	margin-top: 0;
-	padding-top: 50vh;
-}
-
-h2 {
-	text-transform: uppercase;
-	font-size: 1rem;
-	font-weight: 100;
-	letter-spacing: 0.2rem;
+.home-titles {
+	padding-top: 55vh;
 }
 
 /*------------------------------------*\
@@ -93,10 +69,23 @@ h2 {
 	height: auto;
 	width: 100%;
 	position: relative;
-	padding-top: 40px;
-	display: block;
-	position: relative;
 	text-align: center;
+}
+
+.hello-wrap {
+    width: 100%;
+    padding: 40px 15px 20px 15px;
+    box-sizing: border-box;
+}
+
+.hello {
+	margin: 0 ;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
 }
 
 .text-1 {
@@ -109,45 +98,6 @@ h2 {
 
 .more-btn {
 	background-color: $red;
-}
-
-/* BTN */
-.button{
-	text-decoration: none;
-	font-size: 1.2rem;
-	font-weight: 500;
-	border: 1.5px solid $red;
-	color: $red;
-	overflow: hidden;
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 40px auto;
-	position: relative;
-	-webkit-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-.button:before{
-  content: "";
-  z-index: -2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background-color: $red;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.button:hover {
-  color: white;
-}
-
-.button:hover:before{
-  left: 0%;
 }
 
 /*------------------------------------*\
@@ -163,3 +113,60 @@ h2 {
 	position: relative;
 }
 
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+@media screen and (min-width: 1024px) {	
+	.home-titles {
+		padding-top: 42vh;
+	}
+	.section-1 {
+		background-image: url("/images/main_image_L.jpg");
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100vh;
+		background-size:cover;
+		background-position:center center;
+		z-index: -1;
+		color: white;
+		display: block;
+		position: relative;
+	}
+
+	.hello-wrap {
+		padding: 80px 0px 40px 0px;
+		width: 33.3333337%;
+		margin: 0 auto;		
+	}
+
+
+	.hello-wrap:before {
+	    content: "HELLO";
+	    color: $gray;
+	    line-height: 2.4;
+	    font-size: 13rem;
+	    font-weight: 400;
+	    letter-spacing: 4rem;
+	   	position: absolute; 
+	   	top: 0px;
+	   	left: 0;
+	    margin: 0 auto;
+	    padding: 0;
+	    z-index: -10;
+	   	text-align: center;
+	   	vertical-align: -50%;
+	   	opacity: 0.7;
+	}
+
+	.image-block {
+		background-image: url("/images/office_L.jpg");
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}

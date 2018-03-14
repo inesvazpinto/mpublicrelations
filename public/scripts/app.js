@@ -84,21 +84,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     #Menu
 \*------------------------------------*/
 var menu = document.getElementById('js-menu');
+var menuBtnWrap = document.getElementById('js-menu-btn-wrap');
 var menuBtn = document.getElementById('js-menu-btn');
+
+var description = document.getElementById('js-description');
+
+var openMember = document.getElementById('js-member');
+var closeBtn = document.getElementById('js-close');
+var backBtn = document.getElementById('js-back-team');
+
 /**
  * check if is mobile device based on media queries
  */
-var isMobile = function isMobile() {
-    return window.matchMedia("(max-width: 64rem)").matches;
-};
+/*
+const isMobile = () => window.matchMedia( "(max-width: 64rem)" ).matches;
 if (!isMobile()) {
-    // for desktop:
+   // for desktop:
+   
+}
+else {
+   // for mobile:
+   
+}*/
 
-} else {}
-    // for mobile:
-
-    // Open Menu Btn //
-menuBtn.addEventListener('click', function () {
+// Open Menu Btn //
+menuBtnWrap.addEventListener('click', function () {
     if (menu.classList.contains('is--hidden')) {
         menu.classList.remove('is--hidden');
         menu.classList.add('is--visible');
@@ -111,9 +121,32 @@ menuBtn.addEventListener('click', function () {
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 
 // Close Menu Btn //
-menuBtn.addEventListener('click', function () {
+menuBtnWrap.addEventListener('click', function () {
     menu.classList.toggle('active');
     menuBtn.classList.toggle('active');
+}, false);
+
+// Open Member Description Btn //
+openMember.addEventListener('click', function () {
+    if (description.classList.contains('is---hidden')) {
+        description.classList.remove('is---hidden');
+        description.classList.add('is---visible');
+    } else {
+        description.classList.add('is---hidden');
+        description.classList.remove('is---visible');
+    }
+});
+
+window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+
+// Close Menu Btn //
+closeBtn.addEventListener('click', function () {
+    description.classList.toggle('active');
+}, false);
+
+// Back to Team Btn //
+backBtn.addEventListener('click', function () {
+    description.classList.toggle('active');
 }, false);
 
 // Selector Box - Servicos //

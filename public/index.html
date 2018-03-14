@@ -26,7 +26,7 @@
 	<body>
 
 		<header>
-			<a href="index.html">
+			<a href="index.html" class="logo-home">
 				<svg class="logo-M" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 					<g>
@@ -40,7 +40,9 @@
 				</svg>
 			</a>
 			<!-- Menu Btn -->
-			<div class="menu-btn" id="js-menu-btn"></div>
+			<div class="menu-btn-wrap" id="js-menu-btn-wrap">
+				<div class="menu-btn" id="js-menu-btn"></div>
+			</div>
 			<!-- Menu -->
 			<div class="menu is--hidden" id="js-menu">
 				<a href="index.html">
@@ -57,12 +59,12 @@
 					</svg>
 				</a>
 				<nav class="nav">
-					<ul>
-						<li><a href="servicos.html" class="menu-item">Serviços</a></li>
-						<li><a href="clientes.html" class="menu-item">Clientes</a></li>
-						<li><a href="sobre.html" class="menu-item">Sobre</a></li>
-						<li><a href="equipa.html" class="menu-item">Equipa</a></li>
-						<li><a href="contactos.html" class="menu-item">Contactos</a></li>
+					<ul class="menu-items">
+						<li class="display-menu-items"><a href="servicos.html" class="menu-item">Serviços</a></li>
+						<li class="display-menu-items"><a href="clientes.html" class="menu-item">Clientes</a></li>
+						<li class="display-menu-items"><a href="sobre.html" class="menu-item">Sobre</a></li>
+						<li class="display-menu-items"><a href="equipa.html" class="menu-item">Equipa</a></li>
+						<li class="display-menu-items"><a href="contactos.html" class="menu-item">Contactos</a></li>
 					</ul>
 					<ul class="social-icons"> <!-- Social icons -->
 						<li><a class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
@@ -80,22 +82,27 @@
 			<!-- Image & Title -->
 			<section class="section-1"> <!-- Insert image as background -->
 				<div class="section-margin-cover">
-					<h1>We are<br>M Public<br>Relations</h1>
-					<h2>Agência de comunicação e relações públicas</h2>
-
 					<ul class="language"> <!-- Language -->
 						<li><a class="language-item">PT</a></li>
 						<li><a class="language-item">EN</a></li>
 					</ul>
+					<h1 class="title home-titles">We are<br>M Public<br>Relations</h1>
+					<h2 class="subtitle">Agência de comunicação e relações públicas</h2>
+
+					
 				</div>
 			</section>
 			
 			<!-- Hello -->
 			<section class="section-2" >
-				<div class="section-margin">
-					<p class="text-1">A M PUBLIC RELATIONS é uma agência de comunicação e relações públicas. Prestamos serviços de consultoria de comunicação estreitamente ligada às estratégias de crescimento dos seus clientes, com os mais elevados padrões de qualidade e rigor.</p>
-					<a href="#" class="button">Mais sobre a M</a>
+				<div class="hello-wrap">
+					<div class="hello">
+						<p class="text-1">A M PUBLIC RELATIONS é uma agência de comunicação e relações públicas. Prestamos serviços de consultoria de comunicação estreitamente ligada às estratégias de crescimento dos seus clientes, com os mais elevados padrões de qualidade e rigor.</p>
+					</div>
+
+					<a href="#" class="button more-btn">Mais sobre a M</a>
 				</div>
+				
 			</section>
 
 			<!-- Image -->

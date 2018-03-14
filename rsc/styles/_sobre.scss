@@ -20,61 +20,34 @@ html ul {
 }
 
 /*------------------------------------*\
-    #Section-General
-\*------------------------------------*/
-.clientes .section-margin-cover {
-	margin-right: 40px;
-}
-
-/*------------------------------------*\
     #Section-1
 \*------------------------------------*/
-.section-cover {
-	background-image: url("/images/main_image_S.jpg");
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 80vh;
-	background-size:cover;
-	background-position:center center;
-	z-index: -10;
-	color: white;
-	position: relative;
-
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-content: flex-end;
-}
-
 .sobre h1 {
 	text-transform: initial;
 	letter-spacing: 0.2rem;
 }
 
-.sobre h2 {
+.sobre .subtitle {
 	text-transform: initial;
 	font-size: 1.5rem;
 	font-weight: 100;
 	letter-spacing: 0.2rem;
-	margin-bottom: 25px;
 }
+
 /*------------------------------------*\
     #Section-2
 \*------------------------------------*/
+.sobre-wrap {
+	padding: 30px 0px;
+}
+
 .m-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
 	padding: 0;
 	background:transparent url("/images/m-simbolo.png") no-repeat center center;
-	margin-top: 40px;
-	margin-bottom: 40px;
 	width: 100%;
 	height: 200px;
 	background-size: contain;
+	margin-bottom: 30px;
 
 }
 
@@ -106,9 +79,13 @@ html ul {
 	box-align:center;*/    
 }
 
-
 /*------------------------------------*\
     #Section-3
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    #Section-4
 \*------------------------------------*/
 
 .section-sobre {
@@ -120,7 +97,6 @@ html ul {
 	color: white;
 	display: block;
 	position: relative;
-	margin-top: 55px;
 }
 
 .text-2 {
@@ -128,19 +104,111 @@ html ul {
 	font-weight: 400;
 	text-align: left;
 	line-height: 1.6;
+	margin: 15px;
 }
 
 .padding-top {
 	padding: 30px 0px;
 }
 
+.red-box {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	background-color: $red;
+	opacity: 1;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 50%;
+	mix-blend-mode: multiply;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.text-3 {
+	font-size: 1.25rem;
+	font-weight: 300;
+	text-align: left;
+	line-height: 1.6;
+	letter-spacing: 0.1rem;
+	max-width: 480px;
+	color: white;
+	padding-right: 30px;
+	box-sizing: border-box;
+}
 /*------------------------------------*\
     #MQ
 \*------------------------------------*/
-
-
 @media screen and (min-width: 1024px) {	
+	.sobre-wrap {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: center;
+		max-width: 960px;
+		margin: 0 auto;
+	}
 
+	.m-container {
+		padding: 0;
+		background:transparent url("/images/m-simbolo.png") no-repeat center center;
+		width: 50%;
+		height: 200px;
+		background-size: contain;
+		margin-bottom: 0px;
+	}
+	.section--sobre {
+	    width: 50%; 
+	}
+
+	.sobre-margin-left {
+		margin: 80px 30px;
+	}
+
+	.sobre-margin-right {
+		margin: 80px 30px;
+	}
+
+	.text-2 {
+		font-size: 1.3rem;
+		font-weight: 400;
+		text-align: left;
+		line-height: 1.6;
+    	letter-spacing: 0.1rem;
+	}
+
+	.text-2-margin-bottom {
+		margin-bottom: 30px;
+	}
+
+	.text-3 {
+		font-size: 1.5rem;
+	}
+
+	.red-box {
+		align-items: flex-end;
+		align-content: flex-end;
+		width: 50%;
+		height: 100%;
+	}
+
+	.section-sobre {
+		background: url("/images/sobre_image_L.jpg") no-repeat center center;
+		width: 100%;
+		height: 60vh;
+		background-size:cover;
+		z-index: -10;
+		color: white;
+		display: block;
+		position: relative;
+		margin-top: 0px;
+		height: 300px;
+	}
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {

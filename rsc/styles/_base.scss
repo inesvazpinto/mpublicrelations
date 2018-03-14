@@ -1,6 +1,8 @@
 $font-stack: 'Work Sans', sans-serif;
 $red: #E5343E;
 $blue: #252036;
+$gray: #E7E5EA;
+$lightgray: #F3F2F5;
 
 /*------------------------------------*\
     #Header
@@ -14,6 +16,12 @@ header {
 	width: 100%;
 }
 
+.logo-home {
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
 .logo-M {
 	margin: 15px;
 	height: 40px;
@@ -22,12 +30,26 @@ header {
 	fill: white;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
 /* ----------- Menu Btn - open - closed ----------- */
+.menu-btn-wrap {
+	margin: 15px;
+	position: absolute;
+	right: 10px;
+    top: 10px;
+	width: 30px;
+	height: 30px;
+	z-index: 3;
+	height: fit-content;
+}
+
 .menu-btn {
 	display: block;
-	position: absolute;
-	right: 15px;
-	top: 30px;
 	background: #fff;
 	height: .2rem;
 	width: 30px;
@@ -71,7 +93,7 @@ header {
 	-webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 	width: 100vw;
-	height: 100%;
+	height: 100vh;
 	z-index: 2;
 }
 
@@ -81,6 +103,11 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
 }
 
 .menu.is--hidden {
@@ -100,6 +127,10 @@ header {
 	position: relative;
 }
 
+.display-menu-items {
+	display: block;
+}
+
 .menu-item::after {
     content: '';
 	display: block;
@@ -110,18 +141,22 @@ header {
     width: 0%;
     margin-bottom: -6px;
     background-color: white;
-    -webkit-transition: width 0.3s ease-in-out;
-	transition: width 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .menu-item:hover::after {
 	width: 100%;
 	-webkit-transition: all 0.3s ease-in-out;
-	transition: width 0.3s ease-in-out;
-
+	transition: all 0.3s ease-in-out;
 }
 
 /* ----------- Social Icons ----------- */
+.social-icons {
+	text-align: center;
+    margin: 0 auto;
+}
+
 .social-icon {
     color: $blue;
     font-size: 2.5rem;
@@ -129,7 +164,6 @@ header {
 
 .social-icon:hover {
     color: white;
-
 }
 
 ul .social-icons {
@@ -144,6 +178,8 @@ ul .social-icons {
 
 .social-icons a {
     text-decoration: none;
+    display: inline;
+	float: left;
 }
 
 .fa-facebook-f, .fa-linkedin-in {
@@ -162,6 +198,7 @@ ul .social-icons {
 	position: absolute;
 	bottom: 15px;
 	left: 15px;
+	z-index: 999999999999999;
 }
 
 .language-item {
@@ -171,6 +208,7 @@ ul .social-icons {
 	letter-spacing: 0.2rem;
 	position: relative;
 	margin-right: 20px;
+	z-index: 1;
 }
 
 .language-item::after {
@@ -183,33 +221,132 @@ ul .social-icons {
     width: 0%;
     margin-bottom: -2px;
     background-color: white;
-    -webkit-transition: width 0.3s ease-in-out;
-	transition: width 0.3s ease-in-out;
+	-webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  	transition:         all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+	z-index: 2;
 }
 
 .language-item:hover::after {
 	width: 100%;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: width 0.3s ease-in-out;
+	-webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  	transition:         all 600ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 ul.language {
     margin-top: 10px;
+    z-index: 999999999999999;
 }
 
 .language li {
     vertical-align: top;
     display: inline;
+    float: left;
+}
+
+
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+
+.section-margin-cover, .section-margin {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.section-margin-cover {
+	display: inline-block;
+}
+
+.section-cover {
+	background-image: url("/images/main_image_S.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 70vh;
+	background-size:cover;
+	background-position:center center;
+	z-index: -10;
+	color: white;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-content: flex-end;
+}
+
+.title {
+	text-transform: uppercase;
+	font-size: 5rem;
+	font-weight: 100;
+	line-height: 1.1;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+.subtitle {
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: 100;
+	letter-spacing: 0.2rem;
+	padding-bottom: 40px;
+}
+
+/* BTN RED */
+.button{
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 300;
+	letter-spacing: 0.07rem;
+	border: 1.5px solid $red;
+	color: white;
+	background-color: transparent;
+	overflow: hidden;
+	display: inline-block;
+	padding: 12px 30px;
+	min-width: 100px;
+	margin: 40px auto;
+	position: relative;
+	-webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+	transition:         all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+	z-index: 0;
+}
+
+.button:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: $red;
+	-webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  	transition:         all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+	z-index: -1;
+}
+
+.button:hover {
+  color: $red;
+  font-weight: 400;
+}
+
+.button:hover:before{
+  left: -100%;
 }
 
 /*------------------------------------*\
     #Footer
 \*------------------------------------*/
 footer {
+	display: block;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 	padding: 5px 0px;
 	height: auto;
 	width: 100vw;
-	background-color: rgba(37,32,54,0.1);
+	background-color: $gray;
+	margin-bottom: 0px;
 
 	p{
 		font-size: .7rem;
@@ -219,3 +356,85 @@ footer {
 		color: $blue;
 	}
 }
+
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {	
+	header {
+		width: auto;
+	}
+	.section-margin-cover {
+		margin-left: 15vw;
+	}
+
+	.section-margin {
+	    margin-left: 15vw;
+	    margin-right: 15vw;
+	}
+
+	.logo-M {
+		margin: 30px;
+		height: 60px;
+	}
+
+	.menu-btn-wrap {
+		margin: 30px;
+		position: absolute;
+    	top: 50vh;
+    	left: 0;
+	}
+
+	.nav {
+	    position: absolute;
+	    top: 50vh;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    text-align: center;
+	}
+
+	.display-menu-items {
+		display: inline;
+		float: left;
+		margin: 0 1vw;
+	}	
+
+	.social-icons {
+		    margin-top: 2rem;
+	}
+
+	.language {
+		position: absolute;
+		top: 30px;
+		left: 92vw;
+	}
+
+	.title {
+		text-transform: uppercase;
+		font-size: 7.5rem;
+		letter-spacing: 0.4rem;
+		font-weight: 100;
+		line-height: 1.1;
+		margin-bottom: 30px;
+	}
+
+	.subtitle {
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		font-weight: 100;
+		letter-spacing: 0.2rem;
+		margin-right: 33%;
+	}
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+

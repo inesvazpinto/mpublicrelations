@@ -19,6 +19,8 @@ html ul {
 	margin: 0px;
 }
 
+input:focus {outline:none;}
+textarea:focus, input:focus {outline: 0;}
 /*------------------------------------*\
     #Section-General
 \*------------------------------------*/
@@ -26,22 +28,58 @@ html ul {
     fill: $red;
 }
 .contactos .menu-btn, .contactos .menu-btn::after, .contactos .menu-btn::before {
-    background: $red;
+    background: $blue;
 }
 
-.contactos {
-	background-color: rgb(235,235,235);
-	min-height: 100vh;
+.contactos .menu-btn.active {
+	background: transparent;
 }
+
+.contactos .menu-btn.active::before {
+  background: white;
+}
+
+.contactos .menu-btn.active::after {
+  background: white;
+}
+
+
+.contactos {
+	background-color: $lightgray;
+	height: auto;
+
+}
+.main-content {
+
+	min-height: 100vh;
+    height: auto;
+    box-sizing: border-box;
+}
+.m-background {
+	background-image: url(/images/m-background.svg);
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: auto;
+	background-size:cover;
+	background-position: left top;
+	display: block;
+	position: absolute;
+}
+
+.contactos-wrap {	
+	display: block;
+}
+
 /*------------------------------------*\
     #Section-1
 \*------------------------------------*/
 
 .address {
-	margin-top: 25vh;
+	margin-top: 100px;
+	margin-left: 15px;
 }
 
-.contactos h2 {
+.contactos .subtitle {
 	text-transform: initial;
 	font-size: 1.7rem;
 	font-weight: 300;
@@ -55,17 +93,17 @@ html ul {
 	line-height: 1.8;
 }
 
-.contactos h1 {
-	font-size: 4rem;
-	font-weight: 200;
-	text-transform: initial;
-	letter-spacing: 0.2rem;
+.contactos .title {
 	color: $red;
-	padding-top: 50px;
-	-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);
-	transition:         all 600ms cubic-bezier(1, 0, 0, 1);
+	text-transform: none;
+	margin-bottom: 30px;
+	position: absolute;
+	top: 350px;
 }
 
+.contactos .subtitle {
+	padding-bottom: 0px;
+}
 
 .padding-bottom {
 	padding-bottom: 80px;
@@ -73,20 +111,44 @@ html ul {
 /*------------------------------------*\
     #Form
 \*------------------------------------*/
-.form-contact {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-content: flex-end;
-	width: 300px;
+.left {
+    display:flex;
+    flex-direction:column;
 }
 
-.form-group {
-	margin-bottom: 30px;
-	color: $blue;
+.right {
+    display:flex;
+    flex-direction:column;
 }
-.form-control {
+
+.form-contact {
+	margin-top: 30vh;
+}
+
+.form-txt {
+	font-size: 1rem;
+	font-weight: 400;
+	border-radius: 0;
+	opacity: 0.6;
+}
+.form {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+.form-group-row {
+	display: table-row;
+	width: 100%;
+}
+.form-column {
+	width: 100%;
+	padding-right: 0px;
+	float: left;
+	display:table-cell;
+	box-sizing: border-box;
+}
+
+.form-item {
 	font-size: 1.2rem;
 	border-radius: 0;
 	border-color: $blue;
@@ -94,38 +156,70 @@ html ul {
 	border-style: none none solid none;
 	box-shadow: none;
 	background: transparent;
-	float: none;
+	padding-bottom: 10px;
+	margin-top: 30px;
+	color: $blue;
+	width: 100%;
 }
 
-.form-control:focus {
+.form-row {
+	width: 100%;
+	padding-right: 0px;
+	float: left;
+	display:table-cell;
+	box-sizing: border-box;
+}
+
+.form-message {
+	font-size: 1.2rem;
+	border-radius: 0;
+	border-color: $blue;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	box-shadow: none;
+	background: transparent;
+	padding-bottom: 10px;
+	margin-top: 30px;
+	color: $blue;
+	padding-right: 0px;
+	width: 100%;
+}
+
+.form-item:focus {
 	border-color: inherit;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-.form-control::-webkit-input-placeholder { /* Chrome */
+.form-message::-webkit-input-placeholder { /* Chrome */
 	font-size: 1rem;
 	color: $blue;
-	opacity: 0.5;
+	opacity: 0.6;
+}
+
+.form-item::-webkit-input-placeholder { /* Chrome */
+	font-size: 1rem;
+	color: $blue;
+	opacity: 0.6;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	font-size: 1rem;
 	color: $blue;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
 	font-size: 1rem;
 	color: $blue;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
 	font-size: 1rem;
 	color: $blue;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
 	font-size: 1rem;
 	color: $blue;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	background-color: $blue;
@@ -133,47 +227,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	color: $blue;
 }
 
-.button-red{
-	text-decoration: none;
-	//letter-spacing: 0.1rem;
-	font-size: 1.2rem;
-	font-weight: 500;
-	border: 1.5px solid $red;
-	color: white;
-	background-color: $red;
-	overflow: hidden;
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 40px auto;
-	position: relative;
-	-webkit-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	z-index: 0;
+.button-align {
+	text-align: center;
 }
 
-.button-red:before{
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background-color: white;
-  color: $red;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.button-red:hover {
-  color: red;
-}
-
-.button-red:hover:before{
-  left: 0;
-}
 /*------------------------------------*\
     #MQ
 \*------------------------------------*/
@@ -181,6 +238,146 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 @media screen and (min-width: 1024px) {	
 
+	.address {
+		margin-top: 45vh;
+		margin-left: 15vw;
+    	margin-right: 30px;
+	}
+
+	.contactos-wrap {	
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	.contactos .title {
+		position: absolute;
+    	top: 25vh;
+    	left: 0;
+	}
+
+	.form-contact {
+		width: 40vw;
+	}
+
+	.contactos .subtitle {
+		font-size: 2.6rem;
+	}	
+
+	.contactos-text {
+		font-size: 1.3rem;
+		line-height: 2;
+	}
+
+	.form-contact {
+		margin-top: 45vh;
+	}
+
+	.form {
+		display: table;
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	.form-group-row {
+		display: table-row;
+		width: 100%;
+	}
+
+	.form-column {
+		width: 50%;
+		padding-right: 20px;
+		float: left;
+		display:table-cell;
+		box-sizing: border-box;
+	}
+
+	.form-item {
+		font-size: 1.2rem;
+		border-radius: 0;
+		border-color: $blue;
+		border-width: 0 0 1px 0;
+		border-style: none none solid none;
+		box-shadow: none;
+		background: transparent;
+		padding-bottom: 10px;
+		margin-top: 30px;
+		color: $blue;
+		width: 100%;
+	}
+
+	.form-row {
+		width: 100%;
+		padding-right: 40px;
+		float: left;
+		display:table-cell;
+		box-sizing: border-box;
+	}
+
+	.form-message {
+		font-size: 1.2rem;
+		border-radius: 0;
+		border-color: $blue;
+		border-width: 0 0 1px 0;
+		border-style: none none solid none;
+		box-shadow: none;
+		background: transparent;
+		padding-bottom: 10px;
+		margin-top: 30px;
+		color: $blue;
+		padding-right: 20px;
+		width: 100%;
+	}
+
+	.form-txt {
+		font-size: 1rem;
+		font-weight: 400;
+		border-radius: 0;
+		opacity: 0.6;
+	}
+
+	.form-control {
+		font-size: 1.3rem;
+	}
+
+	.form-control::-webkit-input-placeholder { /* Chrome */
+		font-size: 1.2rem;
+		color: $blue;
+		opacity: 0.6;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		font-size: 1.2rem;
+		color: $blue;
+		opacity: 0.6;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		font-size: 1.2rem;
+		color: $blue;
+		opacity: 0.6;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		font-size: 1.2rem;
+		color: $blue;
+		opacity: 0.6;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+		font-size: 1.2rem;
+		color: $blue;
+		opacity: 0.6;
+	}
+	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+		background-color: $blue;
+		background-image: none;
+		color: $blue;
+	}
+
+	.contactos button {
+		margin: 20px 0;
+	}
+	.button-align {
+		text-align: left;
+	}
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
