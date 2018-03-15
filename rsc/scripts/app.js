@@ -1,4 +1,7 @@
 import jQuery from 'jquery';
+
+window.$ = jQuery;
+
 /*------------------------------------*\
     #Menu
 \*------------------------------------*/
@@ -31,6 +34,9 @@ else {
 
 // Open Menu Btn //
 menuBtnWrap.addEventListener('click', function() {
+  console.log('watch');
+  menu.classList.toggle('active');
+  menuBtn.classList.toggle('active');
     if (menu.classList.contains('is--hidden')) {
         menu.classList.remove('is--hidden');
         menu.classList.add('is--visible');
@@ -38,15 +44,16 @@ menuBtnWrap.addEventListener('click', function() {
         menu.classList.add('is--hidden');
         menu.classList.remove('is--visible');
     }
-});
+}, false);
 
-window.$ = jQuery;
-
+/**
+ * Changes - Click event on menuBtnWrap already exists at top; no need for another
+ */
 // Close Menu Btn //
-menuBtnWrap.addEventListener('click', function() {
+/*menuBtnWrap.addEventListener('click', function() {
     menu.classList.toggle('active');
     menuBtn.classList.toggle('active');
-}, false);
+}, false);*/
 
 
 /*------------------------------------*\
@@ -64,7 +71,10 @@ openMember.addEventListener('click', function() {
     }
 });
 
-window.$ = jQuery;
+/**
+ * Changes - Call jquery once at top; it was declared to times
+ */
+//window.$ = jQuery;
 
 
 // Close Menu Btn //

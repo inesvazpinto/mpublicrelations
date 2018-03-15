@@ -80,6 +80,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
+
+window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+
 /*------------------------------------*\
     #Menu
 \*------------------------------------*/
@@ -112,6 +115,9 @@ else {
 
 // Open Menu Btn //
 menuBtnWrap.addEventListener('click', function () {
+    console.log('watch');
+    menu.classList.toggle('active');
+    menuBtn.classList.toggle('active');
     if (menu.classList.contains('is--hidden')) {
         menu.classList.remove('is--hidden');
         menu.classList.add('is--visible');
@@ -119,15 +125,16 @@ menuBtnWrap.addEventListener('click', function () {
         menu.classList.add('is--hidden');
         menu.classList.remove('is--visible');
     }
-});
+}, false);
 
-window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
-
+/**
+ * Changes - Click event on menuBtnWrap already exists at top; no need for another
+ */
 // Close Menu Btn //
-menuBtnWrap.addEventListener('click', function () {
+/*menuBtnWrap.addEventListener('click', function() {
     menu.classList.toggle('active');
     menuBtn.classList.toggle('active');
-}, false);
+}, false);*/
 
 /*------------------------------------*\
     # E Q U I P A 
@@ -144,7 +151,11 @@ openMember.addEventListener('click', function () {
     }
 });
 
-window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+/**
+ * Changes - Call jquery once at top; it was declared to times
+ */
+//window.$ = jQuery;
+
 
 // Close Menu Btn //
 closeBtn.addEventListener('click', function () {

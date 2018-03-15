@@ -292,11 +292,14 @@ ul.language {
 }
 
 /* BTN RED */
+/*
+ * #changes - Alterei o font-weight para ser sempre regular
+ */
 .button{
 	text-align: center;
 	text-decoration: none;
 	font-size: 1.2rem;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 0.07rem;
 	border: 1.5px solid $red;
 	color: white;
@@ -380,11 +383,23 @@ footer {
 		height: 60px;
 	}
 
+	/**
+	 * #changes - Novos estilos hamburguer btn, 
+	 * o botão não era clickavel na maioria do seu espaço
+	 */
+
 	.menu-btn-wrap {
 		margin: 30px;
 		position: absolute;
-    	top: 50vh;
+    	top: calc(50vh + 30px);
     	left: 0;
+    	height: 30px;
+    	margin-top: 0px;
+    	cursor: pointer;
+	}
+
+	.menu-btn {
+		margin-top: 15px;
 	}
 
 	.nav {
@@ -403,6 +418,11 @@ footer {
 
 	.social-icons {
 		    margin-top: 2rem;
+	}
+
+	// #changes - adicionei cursor pointer aos social icons 
+	.social-icons a {
+		cursor: pointer;
 	}
 
 	.language {
