@@ -89,7 +89,8 @@ var menuBtn = document.getElementById('js-menu-btn');
 
 var description = document.getElementById('js-description');
 
-var openMember = document.getElementById('js-member');
+//let openMember = document.querySelectorAll('.js-member');
+
 var closeBtn = document.getElementById('js-close');
 var backBtn = document.getElementById('js-back-team');
 
@@ -126,6 +127,10 @@ menuBtnWrap.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
 }, false);
 
+/*------------------------------------*\
+    # E Q U I P A 
+\*------------------------------------*/
+
 // Open Member Description Btn //
 openMember.addEventListener('click', function () {
     if (description.classList.contains('is---hidden')) {
@@ -149,6 +154,24 @@ backBtn.addEventListener('click', function () {
     description.classList.toggle('active');
 }, false);
 
+// Open Member Description Btn Será isto??? //
+/*
+const openDescription = (el) => {
+    el.addEventListener('click', () => {
+      let description =  document.getElementById('js-description');
+      if (description.classList.contains('is---hidden')) {
+        description.classList.remove('is---hidden');
+        description.classList.add('is---visible');
+      } else {
+        description.classList.add('is---hidden');
+        description.classList.remove('is---visible');
+      }
+    })
+};*/
+
+/*------------------------------------*\
+    # S E R V I Ç O S
+\*------------------------------------*/
 // Selector Box - Servicos //
 $('.selector').click(function () {
     $(this).toggleClass('open');

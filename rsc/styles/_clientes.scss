@@ -68,6 +68,11 @@ html ul {
 	padding-top: 40px;
 	margin: 40px;
 }
+
+.background-gray {
+	background-color: $lightgray;
+}
+
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -79,6 +84,7 @@ html ul {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
+	align-items: center;
 	padding: 0;
 }
 
@@ -91,7 +97,8 @@ html ul {
 	//max-width: 80vw;
 	height: 100%;
 	//height: 80px;
-	padding: 20px;
+	padding: 40px;
+	box-sizing: border-box;
 }
 
 

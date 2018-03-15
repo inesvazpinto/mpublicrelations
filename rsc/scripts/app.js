@@ -6,11 +6,10 @@ let menu =  document.getElementById('js-menu');
 let menuBtnWrap = document.getElementById('js-menu-btn-wrap');
 let menuBtn = document.getElementById('js-menu-btn');
 
-
-
 let description =  document.getElementById('js-description');
 
-let openMember = document.getElementById('js-member');
+//let openMember = document.querySelectorAll('.js-member');
+
 let closeBtn = document.getElementById('js-close');
 let backBtn = document.getElementById('js-back-team');
 
@@ -48,6 +47,9 @@ menuBtnWrap.addEventListener('click', function() {
 }, false);
 
 
+/*------------------------------------*\
+    # E Q U I P A 
+\*------------------------------------*/
 
 // Open Member Description Btn //
 openMember.addEventListener('click', function() {
@@ -62,6 +64,7 @@ openMember.addEventListener('click', function() {
 
 window.$ = jQuery;
 
+
 // Close Menu Btn //
 closeBtn.addEventListener('click', function() {
     description.classList.toggle('active');
@@ -73,6 +76,24 @@ backBtn.addEventListener('click', function() {
 }, false);
 
 
+// Open Member Description Btn Será isto??? //
+/*
+const openDescription = (el) => {
+    el.addEventListener('click', () => {
+      let description =  document.getElementById('js-description');
+      if (description.classList.contains('is---hidden')) {
+        description.classList.remove('is---hidden');
+        description.classList.add('is---visible');
+      } else {
+        description.classList.add('is---hidden');
+        description.classList.remove('is---visible');
+      }
+    })
+};*/
+
+/*------------------------------------*\
+    # S E R V I Ç O S
+\*------------------------------------*/
 // Selector Box - Servicos //
 $('.selector').click(function(){
   $(this).toggleClass('open');
