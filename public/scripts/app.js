@@ -89,6 +89,8 @@ var menuBtn = document.getElementById('js-menu-btn');
 
 var description = document.getElementById('js-description');
 
+var openMember = document.getElementById('js-member');
+
 //let openMember = document.querySelectorAll('.js-member');
 
 var closeBtn = document.getElementById('js-close');

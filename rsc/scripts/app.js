@@ -8,6 +8,8 @@ let menuBtn = document.getElementById('js-menu-btn');
 
 let description =  document.getElementById('js-description');
 
+let openMember =  document.getElementById('js-member');
+
 //let openMember = document.querySelectorAll('.js-member');
 
 let closeBtn = document.getElementById('js-close');

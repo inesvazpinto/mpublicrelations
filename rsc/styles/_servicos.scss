@@ -22,12 +22,24 @@ html ul {
 /*------------------------------------*\
     #Section-General
 \*------------------------------------*/
+
 .servicos .logo-M {
     fill: $red;
 }
 .servicos .menu-btn, .servicos .menu-btn::after, .servicos .menu-btn::before {
     background: $red;
 }
+.servicos .menu-btn.active {
+	background: transparent;
+}
+.servicos .menu-btn.active::before {
+  background: white;
+}
+
+.servicos .menu-btn.active::after {
+  background: white;
+}
+
 .servicos .section-margin-cover {
 	margin-right: 40px;
 }
@@ -35,7 +47,7 @@ html ul {
 .servicos {
 	background-color: rgb(235,235,235);
 	min-height: 100vh;
-}
+}*
 /*------------------------------------*\
     #Section-1
 \*------------------------------------*/
