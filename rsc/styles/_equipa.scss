@@ -174,7 +174,7 @@ html ul {
 .team-detail-picture {
 	
 	background-repeat: no-repeat;
-	width: 100%;
+	width: auto;
 	height: 80vh;
 	background-size:cover;
 	background-position:center center;
@@ -182,6 +182,8 @@ html ul {
 	color: white;
 	position: relative;
 	display: inline-block;
+	left: 50%;
+    transform: translateX(-50%);
 }
 
 .name-detail {
