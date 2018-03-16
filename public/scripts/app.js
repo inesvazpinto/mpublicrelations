@@ -83,21 +83,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 
-/*------------------------------------*\
-    #Menu
-\*------------------------------------*/
+var body = $('#js-top');
+
 var menu = document.getElementById('js-menu');
 var menuBtnWrap = document.getElementById('js-menu-btn-wrap');
 var menuBtn = document.getElementById('js-menu-btn');
 
-var description = document.getElementById('js-description');
+/*------------------------------------*\
+    #Menu
+\*------------------------------------*/
 
-var openMember = document.getElementById('js-member');
+//let description =  document.getElementById('js-description');
+
+//let openMember =  document.getElementById('js-member');
 
 //let openMember = document.querySelectorAll('.js-member');
 
-var closeBtn = document.getElementById('js-close');
-var backBtn = document.getElementById('js-back-team');
+//let closeBtn = document.getElementById('js-close');
+//let backBtn = document.getElementById('js-back-team');
+
 
 /**
  * check if is mobile device based on media queries
@@ -115,7 +119,6 @@ else {
 
 // Open Menu Btn //
 menuBtnWrap.addEventListener('click', function () {
-    console.log('watch');
     menu.classList.toggle('active');
     menuBtn.classList.toggle('active');
     if (menu.classList.contains('is--hidden')) {
@@ -140,8 +143,38 @@ menuBtnWrap.addEventListener('click', function () {
     # E Q U I P A 
 \*------------------------------------*/
 
+/**
+ * changes - not is---hidden but is--hidden
+ * check ID's of descriptions. Each ID has to be unique
+ */
+$(document).on('click', '.js-member', function () {
+    var $self = $(this),
+        $desc = $self.find('.description');
+
+    if ($desc.hasClass('is---hidden')) {
+        $desc.removeClass('is---hidden').addClass('is--visible');
+        setTimeout(function () {
+            $(body).addClass('is--hidden');
+        }, 200);
+    } else {
+        $(body).removeClass('is--hidden');
+        setTimeout(function () {
+            $desc.removeClass('is--visible').addClass('is---hidden');
+            setTimeout(function () {
+                $desc.animate({ scrollTop: 0 }, 0);
+            }, 1000);
+        }, 200);
+    }
+});
+
+$('.js-member').find('a').on('click', function () {
+    $(this).parent().trigger('click');
+    $('html, body').animate({ scrollTop: $('.container-team').offset().top }, 0);
+    return false;
+});
+
 // Open Member Description Btn //
-openMember.addEventListener('click', function () {
+/*openMember.addEventListener('click', function() {
     if (description.classList.contains('is---hidden')) {
         description.classList.remove('is---hidden');
         description.classList.add('is---visible');
@@ -149,7 +182,7 @@ openMember.addEventListener('click', function () {
         description.classList.add('is---hidden');
         description.classList.remove('is---visible');
     }
-});
+});*/
 
 /**
  * Changes - Call jquery once at top; it was declared to times
@@ -158,14 +191,14 @@ openMember.addEventListener('click', function () {
 
 
 // Close Menu Btn //
-closeBtn.addEventListener('click', function () {
+/*closeBtn.addEventListener('click', function() {
     description.classList.toggle('active');
-}, false);
+}, false);*/
 
 // Back to Team Btn //
-backBtn.addEventListener('click', function () {
+/*backBtn.addEventListener('click', function() {
     description.classList.toggle('active');
-}, false);
+}, false);*/
 
 // Open Member Description Btn Será isto??? //
 /*
@@ -185,8 +218,13 @@ const openDescription = (el) => {
 /*------------------------------------*\
     # S E R V I Ç O S
 \*------------------------------------*/
+
+/**
+ * Changes - Change the class selector to ID'S when possible
+ */
+
 // Selector Box - Servicos //
-$('.selector').click(function () {
+$('#js-btn-select-box').click(function () {
     $(this).toggleClass('open');
     $('.options-box').toggleClass('open');
 });

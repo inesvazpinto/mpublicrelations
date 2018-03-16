@@ -11,7 +11,7 @@
 @import 'contactos';
 
 
-html a {
+/*html a {
 	text-decoration: none;
 }
 
@@ -22,14 +22,13 @@ html ul li{
 html ul {
 	padding: 0px;
 	margin: 0px;
-}
-
+}*/
 /*------------------------------------*\
     #Layout
 \*------------------------------------*/
-$font-stack: 'Work Sans', sans-serif;
+//$font-stack: 'Work Sans', sans-serif;
 
-:root {
+/*:root {
 	background-color: white;
 	font-family: $font-stack;
 	font-weight: 100;
@@ -40,7 +39,7 @@ $font-stack: 'Work Sans', sans-serif;
 
 body {
 	overflow-x: hidden;
-}
+}*/
 
 /*------------------------------------*\
     #Section-1
@@ -101,14 +100,16 @@ body {
 /*------------------------------------*\
     #Section-3
 \*------------------------------------*/
+// #changes - background-size
 .image-block {
 	background-image: url("/images/office_S.jpg");
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 300px;
-	background-position:center center;
+	background-position: center center;
 	display: block;
 	position: relative;
+	background-size: cover;
 }
 
 /*------------------------------------*\

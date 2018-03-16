@@ -379,6 +379,41 @@ template {
   display: none;
 }
 
+:root {
+  background-color: white;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+  font-size: 62.5%;
+  color: #252036;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body.is--hidden {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+html a {
+  text-decoration: none;
+}
+
+html ul li {
+  list-style-type: none;
+}
+
+html ul {
+  padding: 0px;
+  margin: 0px;
+}
+
 /*------------------------------------*    #Header
 \*------------------------------------*/
 
@@ -387,7 +422,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 4;
   width: 100%;
 }
 
@@ -420,7 +455,7 @@ body {
   top: 10px;
   width: 30px;
   height: 30px;
-  z-index: 3;
+  z-index: 4;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -432,7 +467,7 @@ body {
   height: .2rem;
   width: 30px;
   background: white;
-  z-index: 3;
+  z-index: 4;
 }
 
 .menu-btn::before,
@@ -478,7 +513,7 @@ body {
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
 }
 
 .nav {
@@ -539,7 +574,10 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.menu-item:hover::after {
+.menu-item:hover::after,
+.menu-item:focus::after,
+.menu-item:active::after,
+.menu-item.is--active::after {
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -605,26 +643,26 @@ ul .social-icons {
   z-index: 1;
 }
 
-.language-item::after {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  width: 0%;
-  margin-bottom: -2px;
-  background-color: white;
-  -webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-  z-index: 2;
+/*.language-item::after {
+    content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+    height: 1px;
+    width: 0%;
+    margin-bottom: -2px;
+    background-color: white;
+	-webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  	transition:         all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+	z-index: 2;
 }
 
 .language-item:hover::after {
-  width: 100%;
-  -webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-}
+	width: 100%;
+	-webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  	transition:         all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+}*/
 
 ul.language {
   margin-top: 10px;
@@ -744,14 +782,16 @@ ul.language {
 /*------------------------------------*    #Footer
 \*------------------------------------*/
 
+/**
+* # changes - added/removed styles for better display and position
+*/
+
 footer {
+  position: relative;
   display: block;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
   padding: 5px 0px;
   height: auto;
-  width: 100vw;
+  width: 100%;
   background-color: #E7E5EA;
   margin-bottom: 0px;
 }
@@ -834,6 +874,17 @@ footer p {
     left: 92vw;
   }
 
+  .language-item {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .language-item:hover,
+  .language-item.is--active {
+    color: #252036;
+    cursor: pointer;
+  }
+
   .title {
     text-transform: uppercase;
     font-size: 7.5rem;
@@ -854,18 +905,18 @@ footer p {
 /*------------------------------------*    #Resets
 \*------------------------------------*/
 
-html a {
-  text-decoration: none;
+/*html a {
+	text-decoration: none;
 }
 
-html ul li {
-  list-style-type: none;
+html ul li{
+	list-style-type: none;
 }
 
 html ul {
-  padding: 0px;
-  margin: 0px;
-}
+	padding: 0px;
+	margin: 0px;
+}*/
 
 /*------------------------------------*    #Section-General
 \*------------------------------------*/
@@ -995,18 +1046,18 @@ html ul {
 /*------------------------------------*    #Resets
 \*------------------------------------*/
 
-html a {
-  text-decoration: none;
+/*html a {
+	text-decoration: none;
 }
 
-html ul li {
-  list-style-type: none;
+html ul li{
+	list-style-type: none;
 }
 
 html ul {
-  padding: 0px;
-  margin: 0px;
-}
+	padding: 0px;
+	margin: 0px;
+}*/
 
 /*------------------------------------*    #Section-1
 \*------------------------------------*/
@@ -1220,23 +1271,23 @@ html ul {
 /*------------------------------------*    #Resets
 \*------------------------------------*/
 
-html {
-  overflow-x: hidden;
+/*html {
+	overflow-x: hidden;
 }
 
 html a {
-  text-decoration: none;
-  display: block;
+	text-decoration: none;
+	display: block;
 }
 
-html ul li {
-  list-style-type: none;
+html ul li{
+	list-style-type: none;
 }
 
 html ul {
-  padding: 0px;
-  margin: 0px;
-}
+	padding: 0px;
+	margin: 0px;
+}*/
 
 /*------------------------------------*    #ss
 \*------------------------------------*/
@@ -1378,7 +1429,7 @@ html ul {
   background-color: #E5343E;
   width: 100vw;
   height: 100%;
-  z-index: 2;
+  z-index: 4;
   overflow-y: scroll;
   -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -1473,7 +1524,7 @@ html ul {
 .button-blue {
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.12rem;
   border: 2px solid #252036;
   color: white;
@@ -1528,6 +1579,10 @@ html ul {
     display: inline-block;
   }
 
+  .member .item {
+    cursor: pointer;
+  }
+
   .equipa h3 {
     font-size: 1.6rem;
     font-weight: 500;
@@ -1537,6 +1592,7 @@ html ul {
   .equipa h4 {
     font-size: 1.1rem;
     font-weight: 400;
+    cursor: pointer;
   }
 
   .member {
@@ -1557,6 +1613,7 @@ html ul {
     position: absolute;
     top: 50vh;
     left: 15px;
+    cursor: pointer;
   }
 
   .team-detail-picture {
@@ -1625,23 +1682,23 @@ html ul {
 /*------------------------------------*    #Resets
 \*------------------------------------*/
 
-html a {
-  text-decoration: none;
+/*html a {
+	text-decoration: none;
 }
 
-html ul li {
-  list-style-type: none;
+html ul li{
+	list-style-type: none;
 }
 
 html ul {
-  padding: 0px;
-  margin: 0px;
-}
+	padding: 0px;
+	margin: 0px;
+}*/
 
 /*------------------------------------*    #Section-General
 \*------------------------------------*/
 
-.servicos .logo-M {
+.servicos .logo-M.logo-m-1 {
   fill: #E5343E;
 }
 
@@ -1701,9 +1758,22 @@ html ul {
 /*------------------------------------*    #Select Box
 \*------------------------------------*/
 
+/*
+ * #changes - que trapalhada que vai para aqui
+ */
+
 .select-box {
+  /*position: fixed;
+    bottom: 0;*/
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #ebebeb;
 }
 
 .selector {
@@ -1711,21 +1781,17 @@ html ul {
   padding-left: 15px;
   padding-right: 15px;
   height: 60px;
-  background-color: #ebebeb;
+  background-color: transparent;
   color: #252036;
   text-align: left;
   border: 1px solid #252036;
   cursor: pointer;
-  width: 100vw;
+  width: 100%;
   display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   font-size: 1.2rem;
   font-weight: 400;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  z-index: 10;
 }
 
 .selector:before {
@@ -1753,7 +1819,7 @@ html ul {
   border: 1px solid #252036;
   background-color: #ebebeb;
   left: 0px;
-  z-index: 9;
+  z-index: 1;
   width: 100vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1839,18 +1905,18 @@ html ul {
 /*------------------------------------*    #Resets
 \*------------------------------------*/
 
-html a {
-  text-decoration: none;
+/*html a {
+	text-decoration: none;
 }
 
-html ul li {
-  list-style-type: none;
+html ul li{
+	list-style-type: none;
 }
 
 html ul {
-  padding: 0px;
-  margin: 0px;
-}
+	padding: 0px;
+	margin: 0px;
+}*/
 
 input:focus {
   outline: none;
@@ -1864,7 +1930,7 @@ input:focus {
 /*------------------------------------*    #Section-General
 \*------------------------------------*/
 
-.contactos .logo-M {
+.contactos .logo-M.logo-m-1 {
   fill: #E5343E;
 }
 
@@ -1898,15 +1964,31 @@ input:focus {
           box-sizing: border-box;
 }
 
+/*
+ * Changes to display and position of element; should be relative,
+ * avoid ABSOLUTES AND FIXED ELEMENTS
+ */
+
 .m-background {
+  /*background-image: url(/images/m-background.svg);
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: auto;
+	background-size:cover;
+	background-position: left top;
+	display: block;
+	position: absolute;*/
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  margin: 0px;
+  padding-bottom: 25px;
+  height: auto;
+  overflow: hidden;
   background-image: url(/images/m-background.svg);
   background-repeat: no-repeat;
-  height: 100vh;
-  width: auto;
   background-size: cover;
   background-position: left top;
-  display: block;
-  position: absolute;
 }
 
 .contactos-wrap {
@@ -2112,7 +2194,6 @@ select:-webkit-autofill {
   .address {
     margin-top: 45vh;
     margin-left: 15vw;
-    margin-right: 30px;
   }
 
   .contactos-wrap {
@@ -2268,6 +2349,7 @@ select:-webkit-autofill {
 
   .contactos button {
     margin: 20px 0;
+    cursor: pointer;
   }
 
   .button-align {
@@ -2275,34 +2357,34 @@ select:-webkit-autofill {
   }
 }
 
-html a {
-  text-decoration: none;
+/*html a {
+	text-decoration: none;
 }
 
-html ul li {
-  list-style-type: none;
+html ul li{
+	list-style-type: none;
 }
 
 html ul {
-  padding: 0px;
-  margin: 0px;
-}
+	padding: 0px;
+	margin: 0px;
+}*/
 
 /*------------------------------------*    #Layout
 \*------------------------------------*/
 
-:root {
-  background-color: white;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 100;
-  line-height: 1.5;
-  font-size: 62.5%;
-  color: #252036;
+/*:root {
+	background-color: white;
+	font-family: $font-stack;
+	font-weight: 100;
+	line-height: 1.5;
+	font-size: 62.5%;
+	color: $blue;
 }
 
 body {
-  overflow-x: hidden;
-}
+	overflow-x: hidden;
+}*/
 
 /*------------------------------------*    #Section-1
 \*------------------------------------*/
@@ -2383,6 +2465,7 @@ body {
   background-position: center center;
   display: block;
   position: relative;
+  background-size: cover;
 }
 
 /*------------------------------------*    #MQ

@@ -6,7 +6,7 @@ $blue: #252036;
 \*------------------------------------*/
 //@import 'normalize';
 
-html a {
+/*html a {
 	text-decoration: none;
 }
 
@@ -17,13 +17,13 @@ html ul li{
 html ul {
 	padding: 0px;
 	margin: 0px;
-}
+}*/
 
 /*------------------------------------*\
     #Section-General
 \*------------------------------------*/
-
-.servicos .logo-M {
+// #changes
+.servicos .logo-M.logo-m-1 {
     fill: $red;
 }
 .servicos .menu-btn, .servicos .menu-btn::after, .servicos .menu-btn::before {
@@ -80,9 +80,21 @@ html ul {
     #Select Box
 \*------------------------------------*/
 
+/*
+ * #changes - que trapalhada que vai para aqui
+ */
 .select-box {
-	position: fixed;
-    bottom: 0;
+	/*position: fixed;
+    bottom: 0;*/
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    z-index: 2;
+	background-color: rgb(235,235,235);  
 }
 
 .selector {
@@ -90,20 +102,22 @@ html ul {
 	padding-left: 15px; 
 	padding-right: 15px; 
 	height: 60px;
-	background-color: rgb(235,235,235);  
+	//background-color: rgb(235,235,235);  
+	background-color: transparent;
 	color: $blue; 
 	text-align: left; 
 	border: 1px solid $blue; 
 	cursor:pointer; 
-	width: 100vw; 
-	display:inline-block; 
-	position: absolute;
-	bottom: 0;
-	left :0;
+	//width: 100vw;
+	width: 100%;
+	display: inline-block; 
+	//position: absolute; - whyyy?
+	//bottom: 0;
+	//left :0; - atenção ao erro
 	font-size: 1.2rem;
 	font-weight: 400;
 	box-sizing: border-box;
-	z-index: 10;
+	//z-index: 10;
 
 	&:before {
 		content:''; 
@@ -128,12 +142,12 @@ html ul {
 	}
 }
 
-
+// #changes -
 .options-box {
 	border: 1px solid $blue;
 	background-color: rgb(235,235,235); 
 	left: 0px;
-	z-index: 9;
+	z-index: 1;
 	width: 100vw;
 	box-sizing: border-box;
 	border-top: 0;
